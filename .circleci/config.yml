@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  build:
+    machine:
+      - image: ubuntu-1604:201903-01
+    steps:
+      - checkout
+      - run:
+          name: Build and Test
+          command: mvn -B package
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - build
