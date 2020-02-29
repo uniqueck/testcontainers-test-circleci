@@ -1,1 +1,3 @@
 = CircleCI Testcontainers Example
+
+This repository shows an example circle ci configuration to run TestContainer tests.
