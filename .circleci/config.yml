@@ -15,7 +15,7 @@ jobs:
           command: tree -a ~
       - run:
           name: show Version of sdkman
-          command: sdk version
+          command: cat ~/.bashrc && sdk version
       - checkout
       - run:
           name: Build and Test
