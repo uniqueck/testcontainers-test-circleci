@@ -15,10 +15,10 @@ jobs:
           command: tree -a ~
       - run:
           name: add sdkman to env
-          command: source "/home/circleci/.sdkman/bin/sdkman-init.sh"
+          command: source "/home/circleci/.sdkman/bin/sdkman-init.sh" && sdk version
       - run:
           name: show Version of sdkman
-          command: sdk -version
+          command: sdk version
       - checkout
       - run:
           name: Build and Test
