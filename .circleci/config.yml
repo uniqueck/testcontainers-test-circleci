@@ -1,15 +1,19 @@
 version: 2.1
+
+defaults: &defaults
+  machine:
+    image: ubuntu-1604:201903-01
+    docker_layer_caching: true
+
 jobs:
   build:
-    machine:
-      image: ubuntu-1604:201903-01
+    <<: *defaults
+
     steps:
-      - run:
-          name: install additional packages
-          command: sudo apt-get update && sudo apt-get install tree graphviz
-      - run:
-          name: install jdk11 adopt
-          command: wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+      - run: wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+      - run: sudo apt-get install -y software-properties-common
+      - run: sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+      - run: sudo apt-get update && sudo apt-get install adoptopenjdk-11 tree graphviz
       - checkout
       - run:
           name: Build and Test
