@@ -5,10 +5,13 @@ jobs:
       image: ubuntu-1604:201903-01
     steps:
       - run:
-          name: Install sdkman
+          name: install sdkman
           command: curl -s "https://get.sdkman.io" | bash
       - run:
-          name: Show Version of sdkman
+          name: add sdkman to env
+          command: source "/home/circleci/.sdkman/bin/sdkman-init.sh"
+      - run:
+          name: show Version of sdkman
           command: sdk -version
       - checkout
       - run:
