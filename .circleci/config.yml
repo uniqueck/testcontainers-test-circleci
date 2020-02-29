@@ -8,6 +8,9 @@ jobs:
           name: install sdkman
           command: curl -s "https://get.sdkman.io" | bash
       - run:
+          name: show content of home directory
+          command: tree ~
+      - run:
           name: add sdkman to env
           command: source "/home/circleci/.sdkman/bin/sdkman-init.sh"
       - run:
