@@ -104,17 +104,6 @@
                 <version>3.0.0-M3</version>
                 <executions>
                     <execution>
-                        <id>enforce-java</id>
-                        <goals><goal>enforce</goal></goals>
-                        <configuration>
-                            <rules>
-                                <requireJavaVersion>
-                                    <version>11</version>
-                                </requireJavaVersion>
-                            </rules>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>enforce-maven</id>
                         <goals><goal>enforce</goal></goals>
                         <configuration>
