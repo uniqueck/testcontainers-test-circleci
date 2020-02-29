@@ -6,7 +6,7 @@ jobs:
     steps:
       - run:
           name: install additional packages
-          command: sudo apt get install tree
+          command: sudo apt-get install tree
       - run:
           name: install sdkman
           command: curl -s "https://get.sdkman.io" | bash
