@@ -6,16 +6,7 @@ jobs:
     steps:
       - run:
           name: install additional packages
-          command: sudo apt-get update && sudo apt-get install tree
-      - run:
-          name: install sdkman
-          command: curl -s "https://get.sdkman.io" | bash && source ~/.sdkman/bin/sdkman-init.sh
-      - run:
-          name: show content of home directory
-          command: tree -a ~
-      - run:
-          name: show Version of sdkman
-          command: cat ~/.bashrc && sdk version
+          command: sudo apt-get update && sudo apt-get install tree graphviz
       - checkout
       - run:
           name: Build and Test
