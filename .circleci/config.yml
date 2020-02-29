@@ -4,6 +4,9 @@ jobs:
     machine:
       image: ubuntu-1604:201903-01
     steps:
+      - run:
+          name: Install sdkman
+          command: curl -s "https://get.sdkman.io" | bash
       - checkout
       - run:
           name: Build and Test
