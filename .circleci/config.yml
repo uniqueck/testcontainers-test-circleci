@@ -14,7 +14,7 @@ jobs:
       - run: sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
       - run: sudo apt-get update && sudo apt-get install adoptopenjdk-11-openj9 tree graphviz java-common
       - run: java -version
-      - run: update-java-alternatives -s adoptopenjdk-11-openj9-amd64
+      - run: sudo update-java-alternatives -s adoptopenjdk-11-openj9-amd64
       - run: java -version
       - checkout
       - run:
