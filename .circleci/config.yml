@@ -17,9 +17,8 @@ jobs:
       - run: sudo update-java-alternatives -s adoptopenjdk-11-openj9-amd64
       - run: java -version
       - checkout
-      - run:
-          name: Build and Test
-          command: mvn -B package
+      - run: mvn -version
+      - run: mvn -B package
 workflows:
   version: 2.1
   build:
