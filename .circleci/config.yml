@@ -7,6 +7,9 @@ jobs:
       - run:
           name: Install sdkman
           command: curl -s "https://get.sdkman.io" | bash
+      - run:
+          name: Show Version of sdkman
+          command: sdk -version
       - checkout
       - run:
           name: Build and Test
