@@ -13,6 +13,7 @@ jobs:
       - run: sudo apt-get install -y software-properties-common
       - run: sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
       - run: sudo apt-get update && sudo apt-get install adoptopenjdk-11-openj9 tree graphviz
+      - run: java -version
       - checkout
       - run:
           name: Build and Test
