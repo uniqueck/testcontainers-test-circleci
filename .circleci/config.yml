@@ -19,7 +19,7 @@ jobs:
       - run: java -version
       - run: javac -version
       - run: export JAVA_HOME="$(dirname $(dirname $(which java)))"
-      - run: export PATH="$JAVA_HOME/bin;$PATH"
+      - run: export PATH="$JAVA_HOME/bin:$PATH"
       - run: javac -version
       - checkout
       - run: mvn -version
